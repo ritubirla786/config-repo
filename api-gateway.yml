@@ -11,10 +11,20 @@ spring:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/users/**
+        - id: user-service-docs
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/v3/api-docs/user-service    
+            
         - id: product-service
           uri: lb://PRODUCT-SERVICE
           predicates:
             - Path=/api/products/**
+        - id: product-service-docs
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/v3/api-docs/product-service     
+            
         - id: order-service
           uri: lb://ORDER-SERVICE
           predicates:
