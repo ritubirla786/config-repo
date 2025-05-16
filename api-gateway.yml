@@ -83,4 +83,13 @@ management:
       endpoint: http://localhost:9412/api/v2/spans
 
 
+springdoc:
+  swagger-ui:
+    urls:
+      - name: user-service
+        url: /v3/api-docs/user-service
+      - name: order-service
+        url: /v3/api-docs/order-service
+      - name: product-service
+        url: /v3/api-docs/product-service
 
