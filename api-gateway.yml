@@ -33,6 +33,15 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/v3/api-docs/order-service    
+
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/api/payments/**
+        - id: payment-service-docs
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/v3/api-docs/payment-service       
       discovery:
          enabled: true
 
